@@ -1,0 +1,252 @@
+@mixin transition($property: all, $duration: 300ms) {
+  -webkit-transition: $property $duration;
+  -moz-transition: $property $duration;
+  -ms-transition: $property $duration;
+  -o-transition: $property $duration;
+  transition: $property $duration;
+}
+
+
+$header-height-init: 100px;
+$header-height: 100px;
+
+$header-border-color: #d9e0e9;
+$header-text-color: #545b73;
+$blue: #0074D9;
+$green: #2ECC40;
+
+
+html, body {
+  height: 100%;
+}
+
+.md-header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height-init;
+  border-bottom: 1px solid $header-border-color;
+  background-color: #FFF;
+}
+
+.md-header-inner {
+  width: 140px * 5;
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  line-height: $header-height-init;
+  color: $header-text-color;
+}
+
+.md-header-item {
+  list-style: none;
+  font-size: 16px;
+  text-align: center;
+  width: 140px;
+  float: left;
+  margin: 0;
+  height: 100%;
+
+  &.center {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  a {
+    @include transition(color);
+    color: inherit;
+    display: block;
+    padding: 0 2px; // fix character white tip issue
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.ly-body {
+  padding-top: $header-height-init;
+}
+
+.md-intro {}
+
+.md-intro-inner {
+  width: 600px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: $header-text-color;
+  padding: 60px 0;
+}
+
+.md-intro-button-wrap {
+  margin-top: 60px;
+}
+
+.md-intro-button {
+  display: block;
+  width: 140px;
+  margin: 0 auto;
+  border: 2px solid $blue;
+  text-align: center;
+  padding: 10px 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 18px;
+
+  @include transition();
+  color: $header-text-color;
+  &:hover {
+    background-color: $blue;
+    color: #FFF;
+    text-decoration: none;
+  }
+}
+
+
+// md-story-board
+// ==========
+.md-story-board {
+  // border-top: 1px solid $header-border-color;
+  height: 600px;
+  overflow: hidden;
+
+  &.story-1 {
+    background-color: $green;
+  }
+
+  &.story-2 {
+    background-color: $blue;
+  }
+
+  &.story-3 {
+    background-color: #FFF;
+  }
+}
+
+.md-story-inner {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+#story-1-left,
+#story-1-right {
+  position: relative;
+  z-index: 0;
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+
+#pagoda {
+  position: absolute;
+  bottom: 0;
+  left: -75px;
+}
+
+#patterson-park {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+#pink-tree {
+  position: absolute;
+  bottom: -10px;
+  right: - 160px / 2;
+  width: 160px;
+}
+
+#md-story-1-intro {
+  margin: 60px 30px 0;
+  color: #FFF;
+  h3 {
+    text-align: center;
+    a {
+      color: inherit;
+    }
+  }
+  p {
+    margin: 20px;
+    font-size: 16px;
+  }
+}
+
+
+#story-2-intro-wrap {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#story-2-intro {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFF;
+  margin: 30px 0 0;
+  width: 500px;
+  h3 {
+    text-align: center;
+    a {
+      color: inherit;
+    }
+  }
+  p {
+    margin: 20px;
+    font-size: 16px;
+  }
+}
+
+#story-2-photo-wrap {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#story-2-photo {
+  position: absolute;
+  bottom: 0;
+  width: 600px;
+  display: block;
+}
+
+#story-3-intro {
+  position: absolute;
+  left: 0;
+  color: $header-text-color;
+  width: 450px;
+  padding: 40px;
+  h3 {
+    a {
+      color: inherit;
+    }
+  }
+  p {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+}
+
+#story-3-photo {
+  position: absolute;
+  top: 40px;
+  width: 400px;
+  right: 0;
+}
+
+
+.md-footer {
+  height: 169px;
+  background-color: #2B2B2B;
+}
+
+.md-footer-inner {
+  overflow: hidden;
+  .md-intro-button {
+    color: #FFF;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "personal-homepage",
+  "version": "0.0.0",
+  "authors": [
+    "Daiwei Lu <daiweilu123@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "modernizr": "~2.7.1",
+    "skrollr": "~0.6.21"
+  }
+}
