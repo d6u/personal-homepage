@@ -123,11 +123,11 @@ html, body {
   color: #FFF; }
   #md-story-1-intro h3 {
     text-align: center; }
-    #md-story-1-intro h3 a {
-      color: inherit; }
   #md-story-1-intro p {
     margin: 20px;
     font-size: 16px; }
+  #md-story-1-intro a {
+    color: inherit; }
 
 #story-2-intro-wrap {
   width: 500px;
